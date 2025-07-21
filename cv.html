@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Abdullah AL HAGURI</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        padding: 20px;
+      }
+
+      .cv-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: white;
+        padding: 40px;
+        text-align: center;
+        position: relative;
+      }
+
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 5px solid white;
+        margin: 0 auto 20px;
+        background: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: #666;
+        text-align: center;
+      }
+
+      .profile-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        font-weight: 300;
+      }
+
+      .header p {
+        font-size: 1.1em;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .main-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 0;
+      }
+
+      .sidebar {
+        background: #f8f9fa;
+        padding: 40px 30px;
+        border-right: 3px solid #1e3c72;
+      }
+
+      .content {
+        padding: 40px;
+      }
+
+      .section {
+        margin-bottom: 30px;
+      }
+
+      .section h2 {
+        color: #1e3c72;
+        font-size: 1.4em;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #1e3c72;
+        position: relative;
+      }
+
+      .section h2::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        background: #2a5298;
+      }
+
+      .contact-info {
+        margin-bottom: 25px;
+      }
+
+      .contact-item {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+      }
+
+      .contact-item strong {
+        color: #1e3c72;
+        margin-right: 10px;
+        min-width: 80px;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .skill-item {
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        border-left: 3px solid #1e3c72;
+        font-size: 0.9em;
+      }
+
+      .languages {
+        margin-top: 15px;
+      }
+
+      .language-item {
+        background: white;
+        margin: 8px 0;
+        padding: 12px;
+        border-radius: 8px;
+        border-left: 3px solid #2a5298;
+      }
+
+      .experience-item,
+      .education-item {
+        margin-bottom: 25px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        border-left: 4px solid #1e3c72;
+      }
+
+      .experience-header,
+      .education-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+      }
+
+      .job-title,
+      .degree-title {
+        color: #1e3c72;
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+
+      .company,
+      .school {
+        color: #666;
+        font-style: italic;
+      }
+
+      .date,
+      .location {
+        color: #888;
+        font-size: 0.9em;
+      }
+
+      .job-description {
+        margin-top: 10px;
+        color: #555;
+      }
+
+      .hobbies {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .hobby-item {
+        background: #1e3c72;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 0.9em;
+        transition: all 0.3s ease;
+      }
+
+      .hobby-item:hover {
+        background: #2a5298;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(30, 60, 114, 0.3);
+      }
+
+      .linkedin-link {
+        color: #1e3c72;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+
+      .linkedin-link:hover {
+        color: #2a5298;
+        transform: scale(1.05);
+        text-shadow: 0 2px 4px rgba(42, 82, 152, 0.3);
+      }
+
+      .contact-item {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .contact-item:hover {
+        transform: translateX(5px);
+      }
+
+      .skill-item {
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        border-left: 3px solid #1e3c72;
+        font-size: 0.9em;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .skill-item:hover {
+        background: #1e3c72;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(30, 60, 114, 0.2);
+      }
+
+      .language-item {
+        background: white;
+        margin: 8px 0;
+        padding: 12px;
+        border-radius: 8px;
+        border-left: 3px solid #2a5298;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .language-item:hover {
+        background: #f0f4ff;
+        border-left-width: 6px;
+        transform: translateX(5px);
+      }
+
+      .experience-item,
+      .education-item {
+        margin-bottom: 25px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        border-left: 4px solid #1e3c72;
+        transition: all 0.3s ease;
+      }
+
+      .experience-item:hover,
+      .education-item:hover {
+        background: #f0f4ff;
+        border-left-width: 6px;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(30, 60, 114, 0.1);
+      }
+
+      @media (max-width: 768px) {
+        .main-content {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          border-right: none;
+          border-bottom: 3px solid #1e3c72;
+        }
+
+        .header h1 {
+          font-size: 2em;
+        }
+
+        .experience-header,
+        .education-header {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cv-container">
+      <header class="header">
+        <div class="profile-photo">
+          <img src="cv.jpg" alt="" />
+        </div>
+        <h1>Abdullah AL HAGURI</h1>
+        <p>
+          Respectueux, autonome, motivé et courageux, je m'adapte rapidement à
+          tout environnement. Disponible pour un entretien afin d'échanger sur
+          mes compétences et mon projet professionnel.
+        </p>
+      </header>
+
+      <div class="main-content">
+        <aside class="sidebar">
+          <div class="section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+              <div class="contact-item">
+                <strong>Téléphone:</strong>
+                <span>+33 7 80 46 99 07</span>
+              </div>
+              <div class="contact-item">
+                <strong>Email:</strong>
+                <span>alhaguriabdullah@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <strong>LinkedIn:</strong>
+                <a
+                  href="https://www.linkedin.com/in/abdullah-al-haguri/"
+                  class="linkedin-link"
+                  target="_blank"
+                  >Profil LinkedIn</a
+                >
+              </div>
+              <div class="contact-item">
+                <strong>Adresse:</strong>
+                <span>Paris, 75009</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Compétences</h2>
+            <div class="skills-grid">
+              <div class="skill-item">Gestion du stress</div>
+              <div class="skill-item">Curiosité</div>
+              <div class="skill-item">Capacité d'adaptation</div>
+              <div class="skill-item">Persévérance</div>
+              <div class="skill-item">Communication</div>
+              <div class="skill-item">Réactivité</div>
+              <div class="skill-item">Organisation</div>
+              <div class="skill-item">Gestion de projet</div>
+              <div class="skill-item">MS Office</div>
+              <div class="skill-item">Canva</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Langues</h2>
+            <div class="languages">
+              <div class="language-item">
+                <strong>Arabe:</strong> Langue maternelle
+              </div>
+              <div class="language-item">
+                <strong>Français:</strong> B2 - C1
+              </div>
+              <div class="language-item"><strong>Anglais:</strong> A2 - B1</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Loisirs</h2>
+            <div class="hobbies">
+              <div class="hobby-item">Voyage</div>
+              <div class="hobby-item">Sports</div>
+              <div class="hobby-item">Cinéma</div>
+            </div>
+          </div>
+        </aside>
+
+        <main class="content">
+          <div class="section">
+            <h2>Éducation</h2>
+
+            <div class="education-item">
+              <div class="education-header">
+                <div>
+                  <div class="degree-title">Licence professionnelle</div>
+                  <div class="company">
+                    Gestion des organisations de l'économie sociale et solidaire
+                  </div>
+                  <div class="school">Paris Nanterre</div>
+                </div>
+                <div class="date">Septembre 2024 - Juin 2025</div>
+              </div>
+            </div>
+
+            <div class="education-item">
+              <div class="education-header">
+                <div>
+                  <div class="degree-title">Certificat Professionnel</div>
+                  <div class="company">Sciences Humaines et Sociales</div>
+                  <div class="school">Sciences Po Paris</div>
+                </div>
+                <div class="date">Septembre 2022 - Juin 2024</div>
+              </div>
+            </div>
+
+            <div class="education-item">
+              <div class="education-header">
+                <div>
+                  <div class="degree-title">DU Passerelle Étudiant en Exil</div>
+                  <div class="school">Université Sorbonne Paris Nord</div>
+                </div>
+                <div class="date">2020</div>
+              </div>
+            </div>
+
+            <div class="education-item">
+              <div class="education-header">
+                <div>
+                  <div class="degree-title">BTS Comptabilité</div>
+                  <div class="school">National Institute of Yémen</div>
+                </div>
+                <div class="date">2017</div>
+              </div>
+            </div>
+
+            <div class="education-item">
+              <div class="education-header">
+                <div>
+                  <div class="degree-title">Diplôme Secrétariat</div>
+                  <div class="school">Association des Formateurs yéménites</div>
+                </div>
+                <div class="date">2016</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Expériences professionnelles</h2>
+
+            <div class="experience-item">
+              <div class="experience-header">
+                <div>
+                  <div class="job-title">
+                    Bénévole - Chargé d'accueil et d'approvisionnement
+                  </div>
+                  <div class="company">ASEGA (Université Paris Nanterre)</div>
+                </div>
+                <div>
+                  <div class="date">Septembre 2024 - Mars 2025</div>
+                  <div class="location">Paris</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="experience-header">
+                <div>
+                  <div class="job-title">Agent Hôtelier Accueil de jour</div>
+                  <div class="company">Association Aurore</div>
+                </div>
+                <div>
+                  <div class="date">Août 2021 - Août 2022</div>
+                  <div class="location">Paris</div>
+                </div>
+              </div>
+              <div class="job-description">
+                Accueil et orientation des familles, appui à la traduction en
+                arabe, organisation d'événements, servir les repas
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="experience-header">
+                <div>
+                  <div class="job-title">Mission de Service Civique</div>
+                  <div class="company">Préfecture d'Île-de-France</div>
+                </div>
+                <div>
+                  <div class="date">Octobre 2020 - Mai 2021</div>
+                  <div class="location">Paris</div>
+                </div>
+              </div>
+              <div class="job-description">
+                Favoriser l'accueil et accompagner les migrants à la préfecture
+                pour demander l'asile et fournir des repas dans les associations
+                et aide des démarches d'administration
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="experience-header">
+                <div>
+                  <div class="job-title">Secrétaire médical</div>
+                  <div class="company">Althawara Hôpital</div>
+                </div>
+                <div>
+                  <div class="date">2015 - 2017</div>
+                  <div class="location">Yémen</div>
+                </div>
+              </div>
+              <div class="job-description">
+                Accueillir des patients, administratif, et gérer des plannings
+                et rendez-vous
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="experience-header">
+                <div>
+                  <div class="job-title">Assistant Pharmacien</div>
+                </div>
+                <div>
+                  <div class="date">2011 - 2012</div>
+                  <div class="location">Yémen</div>
+                </div>
+              </div>
+              <div class="job-description">
+                Ranger la pharmacie, gérer des stocks
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
